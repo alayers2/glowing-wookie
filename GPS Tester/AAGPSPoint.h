@@ -16,12 +16,14 @@
 @property (nonatomic) float altitude;
 @property (nonatomic) float speed;
 @property (nonatomic) float accuracy;
+@property (nonatomic) float bearing;
 
 -(id)initWithTimestamp:(NSDate *)date
           andLongitude:(float)longitude
            andLatitude:(float)latitude
            andAltitude:(float)altitude
               andSpeed:(float)speed
-           andAccuracy:(float)accuracy;
+           andAccuracy:(float)accuracy
+            andBearing:(float)bearing;
 
 @end

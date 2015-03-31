@@ -120,6 +120,27 @@
    
     [coordsArray addObject:@"<ExtendedData>"];
     [coordsArray addObject:@"\n<SchemaData schemaUrl=\"#schema\"></SchemaData>"];
+    [coordsArray addObject:@"<gx:SimpleArrayData name=\"speed\">"];
+    
+    for (AAGPSPoint *point in array) {
+        [coordsArray addObject:[NSString stringWithFormat:@"<gx:value>%f</gx:value>",point.speed]];
+    }
+    
+    [coordsArray addObject:@"</gx:SimpleArrayData>"];
+    
+    [coordsArray addObject:@"<gx:SimpleArrayData name=\"bearing\">"];
+    for (AAGPSPoint *point in array) {
+        [coordsArray addObject:[NSString stringWithFormat:@"<gx:value>%f</gx:value>",point.bearing]];
+    }
+    [coordsArray addObject:@"</gx:SimpleArrayData>"];
+    
+    [coordsArray addObject:@"<gx:SimpleArrayData name=\"accuracy\">"];
+    for (AAGPSPoint *point in array) {
+        [coordsArray addObject:[NSString stringWithFormat:@"<gx:value>%f</gx:value>",point.accuracy]];
+    }
+    [coordsArray addObject:@"</gx:SimpleArrayData>"];
+
+    
     [coordsArray addObject:@"</ExtendedData>"];
     [coordsArray addObject:@"</gx:Track>"];
     [coordsArray addObject:@"</gx:MultiTrack>"];

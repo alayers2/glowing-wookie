@@ -66,22 +66,32 @@
         
         
         [self.kmlWriter addCoordsFromArray:self.locationArray];
-        
-        
-        
-        NSString *documentsDirectory = [NSHomeDirectory()
-                                        stringByAppendingPathComponent:@"Documents"];
-        
-        NSString *filePath = [documentsDirectory
-                              stringByAppendingPathComponent:@"test.kml"];
+
         [self.kmlWriter closeKML];
-        [self.kmlWriter writeKMLToFile:filePath];
+        [self.kmlWriter writeKMLToFile:[self getFilepathForNow]];
     }
         
     
 
 }
 
+-(NSString *) getFilepathForNow
+{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd-HH-mm"];
+    NSDate *now = [[NSDate alloc] init];
+    NSString *dateString = [format stringFromDate:now];
+
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *info = [bundle infoDictionary];
+    NSString *prodName = [info objectForKey:@"CFBundleDisplayName"];
+    NSString *documentsDirectory = [NSHomeDirectory()
+                                    stringByAppendingPathComponent:@"Documents"];
+    
+    NSString *deviceName = [[UIDevice currentDevice] name];
+    return [NSString stringWithFormat:@"%@/%@_%@_%@.kml", documentsDirectory,prodName,deviceName,dateString];
+
+}
 
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
@@ -110,7 +120,8 @@
                                                                     andLatitude:location.coordinate.latitude
                                                                     andAltitude:location.altitude
                                                                        andSpeed:location.speed
-                                                                    andAccuracy:location.horizontalAccuracy]];
+                                                                    andAccuracy:location.horizontalAccuracy
+                                                                     andBearing:location.course]];
         }
         else if(self.lastLocation){
             [self.locationArray addObject:[[AAGPSPoint alloc] initWithTimestamp:[NSDate date]
@@ -118,7 +129,8 @@
                                                                     andLatitude:location.coordinate.latitude
                                                                     andAltitude:location.altitude
                                                                        andSpeed:location.speed
-                                                                    andAccuracy:location.horizontalAccuracy]];
+                                                                    andAccuracy:location.horizontalAccuracy
+                                                                     andBearing:location.course]];
             
             CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D)* 2);
             coords[1]=location.coordinate;

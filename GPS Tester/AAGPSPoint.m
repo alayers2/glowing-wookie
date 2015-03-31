@@ -16,6 +16,7 @@
            andAltitude:(float)altitude
               andSpeed:(float)speed
            andAccuracy:(float)accuracy
+            andBearing:(float)bearing
 {
     
     self = [super init];
@@ -26,6 +27,7 @@
         self.altitude = altitude;
         self.speed = speed;
         self.accuracy = accuracy;
+        self.bearing = bearing;
     }
     
     return self;
