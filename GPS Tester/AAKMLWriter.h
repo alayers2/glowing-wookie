@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "XMLWriter.h"
+#import "AAGPSPoint.h"
 
 @interface AAKMLWriter : NSObject
 
-+(NSString *)startKMLFile;
+-(void)openKMLWithName:(NSString *)name andAuthor:(NSString *)author andDescription:(NSString *)description;
+
+-(void)closeKML;
+
+-(void)writeKMLToFile:(NSString *)filepath;
+
+-(void)addCoordsFromArray:(NSArray *)coordsArray;
+
+-(NSArray *)generateStyleArraywithName:(NSString *)name width:(int)width color:(NSString *)color andLink:(NSString *)link;
+
 @end
 
 

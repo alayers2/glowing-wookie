@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F664DD11ACB1110009904A1 /* AAGPSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F664DD01ACB1110009904A1 /* AAGPSPoint.m */; };
 		2FFDCEA51AC06FA700AA91E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDCEA41AC06FA700AA91E4 /* main.m */; };
 		2FFDCEA81AC06FA700AA91E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDCEA71AC06FA700AA91E4 /* AppDelegate.m */; };
 		2FFDCEAB1AC06FA700AA91E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDCEAA1AC06FA700AA91E4 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		2FFDCEBF1AC06FA700AA91E4 /* GPS_TesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDCEBE1AC06FA700AA91E4 /* GPS_TesterTests.m */; };
 		2FFDCEC91AC0705500AA91E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFDCEC81AC0705500AA91E4 /* CoreLocation.framework */; };
 		2FFDCECB1AC0705A00AA91E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFDCECA1AC0705A00AA91E4 /* MapKit.framework */; };
-		6BB8118C1ACA008500CCF410 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB8118B1ACA008500CCF410 /* XMLWriter.m */; };
 		6BB8118E1ACA017300CCF410 /* doc.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8118D1ACA017300CCF410 /* doc.kml */; };
 		6BB811911ACA02A700CCF410 /* AAKMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB811901ACA02A700CCF410 /* AAKMLWriter.m */; };
 		C5221831D9303FE0ABB0409F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCA6785038895C182BEDC18 /* libPods.a */; };
@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F664DCF1ACB1110009904A1 /* AAGPSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAGPSPoint.h; sourceTree = "<group>"; };
+		2F664DD01ACB1110009904A1 /* AAGPSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAGPSPoint.m; sourceTree = "<group>"; };
 		2FFDCE9F1AC06FA700AA91E4 /* GPS Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFDCEA31AC06FA700AA91E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FFDCEA41AC06FA700AA91E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,8 +50,6 @@
 		2FFDCEBE1AC06FA700AA91E4 /* GPS_TesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPS_TesterTests.m; sourceTree = "<group>"; };
 		2FFDCEC81AC0705500AA91E4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2FFDCECA1AC0705A00AA91E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		6BB8118A1ACA008500CCF410 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
-		6BB8118B1ACA008500CCF410 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
 		6BB8118D1ACA017300CCF410 /* doc.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = doc.kml; sourceTree = "<group>"; };
 		6BB8118F1ACA02A700CCF410 /* AAKMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAKMLWriter.h; sourceTree = "<group>"; };
 		6BB811901ACA02A700CCF410 /* AAKMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAKMLWriter.m; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				6BB8118D1ACA017300CCF410 /* doc.kml */,
 				6BB8118F1ACA02A700CCF410 /* AAKMLWriter.h */,
 				6BB811901ACA02A700CCF410 /* AAKMLWriter.m */,
-				6BB8118A1ACA008500CCF410 /* XMLWriter.h */,
-				6BB8118B1ACA008500CCF410 /* XMLWriter.m */,
+				2F664DCF1ACB1110009904A1 /* AAGPSPoint.h */,
+				2F664DD01ACB1110009904A1 /* AAGPSPoint.m */,
 				2FFDCEA61AC06FA700AA91E4 /* AppDelegate.h */,
 				2FFDCEA71AC06FA700AA91E4 /* AppDelegate.m */,
 				2FFDCEA91AC06FA700AA91E4 /* ViewController.h */,
@@ -305,11 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB8118C1ACA008500CCF410 /* XMLWriter.m in Sources */,
 				2FFDCEAB1AC06FA700AA91E4 /* ViewController.m in Sources */,
 				2FFDCEA81AC06FA700AA91E4 /* AppDelegate.m in Sources */,
 				2FFDCEA51AC06FA700AA91E4 /* main.m in Sources */,
 				6BB811911ACA02A700CCF410 /* AAKMLWriter.m in Sources */,
+				2F664DD11ACB1110009904A1 /* AAGPSPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,16 @@
 #import <MapKit/MapKit.h>
 #import "KML.h"
 #import "AAKMLWriter.h"
+#import "AAGPSPoint.h"
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
 - (IBAction)startButtonPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
+
+
+
 
 @end
 
