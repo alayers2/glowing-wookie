@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "KML.h"
+#import "AAKMLWriter.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
+- (IBAction)startButtonPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet MKMapView *map;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 
